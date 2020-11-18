@@ -7,6 +7,14 @@ services:
       - dynamodb:/home/dynamodblocal
     ports:
       - 8000:8000
+  python3:
+    restart: always
+    build: ./python
+    container_name: 'python3'
+    working_dir: '/root/'
+    tty: true
+    volumes:
+      - .:/root/opt
 volumes:
   dynamodb:
     driver: local

@@ -15,18 +15,22 @@ services:
     tty: true
     volumes:
       - .:/root/opt
-  master:
-    image: locustio/locust
     ports:
-     - "8089:8089"
-    volumes:
-      - ./locust:/mnt/locust
-    command: -f /mnt/locust/locustfile.py --master -H http://master:8089
-  worker:
-    image: locustio/locust
-    volumes:
-      - ./locust:/mnt/locust
-    command: -f /mnt/locust/locustfile.py --worker --master-host master
+      - "8089:8089"
+  # master:
+  #   container_name: 'locust-master'
+  #   image: locustio/locust
+  #   ports:
+  #    - "8089:8089"
+  #   volumes:
+  #     - ./locust:/mnt/locust
+  #   command: -f /mnt/locust/locustfile.py --master -H http://master:8089
+  # worker:
+  #   container_name: 'locust-worker'
+  #   image: locustio/locust
+  #   volumes:
+  #     - ./locust:/mnt/locust
+  #   command: -f /mnt/locust/locustfile.py --worker --master-host master
 volumes:
   dynamodb:
     driver: local

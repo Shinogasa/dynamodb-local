@@ -8,6 +8,7 @@
 - <https://qiita.com/ekzemplaro/items/62196519c70515bc5ec8>
 - <https://qiita.com/ekzemplaro/items/82b2013bd753ea981173>
 - <https://www.tacoskingdom.com/blog/27>
+- <https://qiita.com/kg1/items/9faf77d7f42e08ae9db6>
 
 ## dynamodb localのコンテナIP
 

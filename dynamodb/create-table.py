@@ -1,7 +1,7 @@
 import boto3
 
 dynamodb = boto3.resource('dynamodb', 
-                          endpoint_url="http://172.24.0.1:8000",
+                          endpoint_url="http://172.27.0.1:8000",
                           region_name='us-west-2',
                           aws_access_key_id='fakeMyKeyId',
                           aws_secret_access_key='fakeSecretAccessKey')
